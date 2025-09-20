@@ -367,15 +367,17 @@
   <!-- JS for sliders -->
   <script>
     // Hero Background Slider
-    const heroSlides = document.querySelectorAll('.hero-slides div');
-    let currentHero = 0;
+    // Background slider
+    const slides = document.querySelectorAll('section.relative > div.absolute');
+    let current = 0;
     setInterval(() => {
-      heroSlides[currentHero].classList.remove('opacity-100');
-      heroSlides[currentHero].classList.add('opacity-0');
-      currentHero = (currentHero + 1) % heroSlides.length;
-      heroSlides[currentHero].classList.remove('opacity-0');
-      heroSlides[currentHero].classList.add('opacity-100');
+      slides[current].classList.remove('opacity-100');
+      slides[current].classList.add('opacity-0');
+      current = (current + 1) % slides.length;
+      slides[current].classList.remove('opacity-0');
+      slides[current].classList.add('opacity-100');
     }, 5000);
+
 
     // Testimonials Slider
     const testimonialSlides = document.querySelector('.testimonial-slides');
@@ -391,4 +393,5 @@
 
 </body>
 </html>
+
 
