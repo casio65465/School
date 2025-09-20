@@ -131,85 +131,129 @@
     <p class="mt-3 text-lg">Snapshots of learning, fun, and achievements.</p>
   </section>
 
-<!-- Albums Section -->
-<section class="max-w-7xl mx-auto px-6 py-12">
+   <!-- Gallery Section -->
+<section class="bg-gray-100 py-12" id="gallery">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-8"></h2>
 
-  <!-- First Row: Albums 1,2,3 -->
-  <div class="grid md:grid-cols-3 gap-8 mb-8">
-
-    <!-- Album 1 -->
-    <div class="album-cover cursor-pointer" onclick="openCarousel(this)">
-      <img src="Image/Gallery 1.jpg" alt="Sports Day Cover" class="rounded-xl shadow-lg">
-      <h3 class="text-xl font-bold text-blue-700 mt-2 text-center">Science Fair- 2081</h3>
-      <div class="hidden album-images">
-        <img src="Image/Gallery 10.jpg" alt="">
-        <img src="Image/Gallery 2.jpg" alt="">
-        <img src="Image/" alt="">
+    <!-- First Row: 3 Albums -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-6">
+      <div class="cursor-pointer" onclick="openAlbum('album1')">
+        <img src="Image/Gallery/Science Fair/Gallery 7.jpg" alt="Album 1" class="w-full h-64 object-cover rounded-lg">
+        <h3 class="text-xl mt-2 text-center">Science Fair- 2081</h3>
+      </div>
+      <div class="cursor-pointer" onclick="openAlbum('album2')">
+        <img src="album2/1.jpg" alt="Album 2" class="w-full h-64 object-cover rounded-lg">
+        <h3 class="text-xl mt-2 text-center">Excursions- 2081</h3>
+      </div>
+      <div class="cursor-pointer" onclick="openAlbum('album3')">
+        <img src="album3/1.jpg" alt="Album 3" class="w-full h-64 object-cover rounded-lg">
+        <h3 class="text-xl mt-2 text-center">Sports Day- 2081</h3>
       </div>
     </div>
 
-    <!-- Album 2 -->
-    <div class="album-cover cursor-pointer" onclick="openCarousel(this)">
-      <img src="images/album2-cover.jpg" alt="Cultural Events Cover" class="rounded-xl shadow-lg">
-      <h3 class="text-xl font-bold text-blue-700 mt-2 text-center">Cultural Events</h3>
-      <div class="hidden album-images">
-        <img src="images/album2-1.jpg" alt="">
-        <img src="images/album2-2.jpg" alt="">
-        <img src="images/album2-3.jpg" alt="">
+    <!-- Second Row: 4–6 Albums -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div class="cursor-pointer" onclick="openAlbum('album4')">
+        <img src="album4/1.jpg" alt="Album 4" class="w-full h-64 object-cover rounded-lg">
+        <h3 class="text-xl mt-2 text-center">Cultural Events- 2081</h3>
+      </div>
+      <div class="cursor-pointer" onclick="openAlbum('album5')">
+        <img src="album5/1.jpg" alt="Album 5" class="w-full h-64 object-cover rounded-lg">
+        <h3 class="text-xl mt-2 text-center">Art Exhibition- 2081</h3>
+      </div>
+      <div class="cursor-pointer" onclick="openAlbum('album6')">
+        <img src="album6/1.jpg" alt="Album 6" class="w-full h-64 object-cover rounded-lg">
+        <h3 class="text-xl mt-2 text-center">Workshop- 2081</h3>
       </div>
     </div>
-
-    <!-- Album 3 -->
-    <div class="album-cover cursor-pointer" onclick="openCarousel(this)">
-      <img src="images/album3-cover.jpg" alt="Excursions Cover" class="rounded-xl shadow-lg">
-      <h3 class="text-xl font-bold text-blue-700 mt-2 text-center">Excursions</h3>
-      <div class="hidden album-images">
-        <img src="images/album3-1.jpg" alt="">
-        <img src="images/album3-2.jpg" alt="">
-        <img src="images/album3-3.jpg" alt="">
-      </div>
-    </div>
-
-  </div>
-
-  <!-- Second Row: Albums 4,5,6 -->
-  <div class="grid md:grid-cols-3 gap-8">
-
-    <!-- Album 4 -->
-    <div class="album-cover cursor-pointer" onclick="openCarousel(this)">
-      <img src="images/album4-cover.jpg" alt="Workshops Cover" class="rounded-xl shadow-lg">
-      <h3 class="text-xl font-bold text-blue-700 mt-2 text-center">Workshops</h3>
-      <div class="hidden album-images">
-        <img src="images/album4-1.jpg" alt="">
-        <img src="images/album4-2.jpg" alt="">
-        <img src="images/album4-3.jpg" alt="">
-      </div>
-    </div>
-
-    <!-- Album 5 -->
-    <div class="album-cover cursor-pointer" onclick="openCarousel(this)">
-      <img src="images/album5-cover.jpg" alt="Science Fair Cover" class="rounded-xl shadow-lg">
-      <h3 class="text-xl font-bold text-blue-700 mt-2 text-center">Sports Day</h3>
-      <div class="hidden album-images">
-        <img src="images/album5-1.jpg" alt="">
-        <img src="images/album5-2.jpg" alt="">
-        <img src="images/album5-3.jpg" alt="">
-      </div>
-    </div>
-
-    <!-- Album 6 -->
-    <div class="album-cover cursor-pointer" onclick="openCarousel(this)">
-      <img src="images/album6-cover.jpg" alt="Art Exhibition Cover" class="rounded-xl shadow-lg">
-      <h3 class="text-xl font-bold text-blue-700 mt-2 text-center">Art Exhibition</h3>
-      <div class="hidden album-images">
-        <img src="images/album6-1.jpg" alt="">
-        <img src="images/album6-2.jpg" alt="">
-        <img src="images/album6-3.jpg" alt="">
-      </div>
-    </div>
-
   </div>
 </section>
+
+<!-- Hidden album images (HTML-based) -->
+<div id="albumsData" class="hidden">
+  <div id="album1">
+    <img src="Image/Gallery/Science Fair/Gallery 1.jpg">
+    <img src="Image/Gallery/Science Fair/Gallery 2.jpg">
+    <img src="Image/Gallery/Science Fair/Gallery 3.jpg">
+    <img src="Image/Gallery/Science Fair/Gallery 4.jpg">
+    <img src="Image/Gallery/Science Fair/Gallery 5.jpg">
+    <img src="Image/Gallery/Science Fair/Gallery 6.jpg">
+    <img src="Image/Gallery/Science Fair/Gallery 7.jpg">
+    <img src="Image/Gallery/Science Fair/Gallery 8.jpg">
+    <img src="Image/Gallery/Science Fair/Gallery 9.jpg">
+    <img src="Image/Gallery/Science Fair/Gallery 10.jpg">
+  </div>
+  <div id="album2">
+    <img src="album2/1.jpg">
+    <img src="album2/2.jpg">
+    <img src="album2/3.jpg">
+  </div>
+  <div id="album3">
+    <img src="album3/1.jpg">
+    <img src="album3/2.jpg">
+    <img src="album3/3.jpg">
+  </div>
+  <div id="album4">
+    <img src="album4/1.jpg">
+    <img src="album4/2.jpg">
+    <img src="album4/3.jpg">
+  </div>
+  <div id="album5">
+    <img src="album5/1.jpg">
+    <img src="album5/2.jpg">
+    <img src="album5/3.jpg">
+  </div>
+  <div id="album6">
+    <img src="album6/1.jpg">
+    <img src="album6/2.jpg">
+    <img src="album6/3.jpg">
+  </div>
+</div>
+
+<!-- Album Modal -->
+<div id="albumModal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden">
+  <div class="relative max-w-4xl w-full bg-white rounded-lg overflow-hidden">
+    <button onclick="closeAlbum()" class="absolute top-3 right-3 text-white bg-red-600 px-3 py-1 rounded z-50">Close</button>
+    <div class="relative">
+      <img id="albumImage" src="" alt="Album Image" class="w-full h-96 object-cover">
+      <button onclick="prevImage()" class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-2 py-1 rounded z-50">Prev</button>
+      <button onclick="nextImage()" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-2 py-1 rounded z-50">Next</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  let currentAlbumImages = [];
+  let currentIndex = 0;
+  let slideInterval;
+
+  function openAlbum(albumId) {
+    const albumDiv = document.getElementById(albumId);
+    currentAlbumImages = Array.from(albumDiv.getElementsByTagName('img')).map(img => img.src);
+    currentIndex = 0;
+    document.getElementById('albumImage').src = currentAlbumImages[currentIndex];
+    document.getElementById('albumModal').classList.remove('hidden');
+
+    slideInterval = setInterval(nextImage, 3000); // Auto slideshow
+  }
+
+  function closeAlbum() {
+    document.getElementById('albumModal').classList.add('hidden');
+    clearInterval(slideInterval);
+  }
+
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % currentAlbumImages.length;
+    document.getElementById('albumImage').src = currentAlbumImages[currentIndex];
+  }
+
+  function prevImage() {
+    currentIndex = (currentIndex - 1 + currentAlbumImages.length) % currentAlbumImages.length;
+    document.getElementById('albumImage').src = currentAlbumImages[currentIndex];
+  }
+</script>
+
 
 
 <!-- Footer -->
@@ -283,51 +327,7 @@
   </div>
 </footer>
 
-<script>
-let carouselImages = [];
-let currentIndex = 0;
-let autoSlideInterval;
 
-function openCarousel(albumDiv) {
-  // Get all images inside hidden album-images div
-  const imagesDiv = albumDiv.querySelector('.album-images');
-  const images = imagesDiv.querySelectorAll('img');
-
-  carouselImages = Array.from(images).map(img => img.src);
-  currentIndex = 0;
-
-  document.getElementById('carouselImage').src = carouselImages[currentIndex];
-  document.getElementById('carouselModal').style.display = 'flex';
-
-  // Start auto-slide every 3 seconds
-  autoSlideInterval = setInterval(() => {
-    nextSlideAuto();
-  }, 3000);
-}
-
-function closeCarousel() {
-  document.getElementById('carouselModal').style.display = 'none';
-  clearInterval(autoSlideInterval);
-}
-
-function nextSlide(event) {
-  if(event) event.stopPropagation();
-  currentIndex = (currentIndex + 1) % carouselImages.length;
-  document.getElementById('carouselImage').src = carouselImages[currentIndex];
-}
-
-function prevSlide(event) {
-  if(event) event.stopPropagation();
-  currentIndex = (currentIndex - 1 + carouselImages.length) % carouselImages.length;
-  document.getElementById('carouselImage').src = carouselImages[currentIndex];
-}
-
-// Auto-slide function
-function nextSlideAuto() {
-  currentIndex = (currentIndex + 1) % carouselImages.length;
-  document.getElementById('carouselImage').src = carouselImages[currentIndex];
-}
-</script>
 
 
 
