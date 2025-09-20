@@ -211,19 +211,6 @@
   </div>
 </section>
 
-<!-- Slider JS -->
-<script>
-  const slides = document.querySelectorAll('section.relative h-screen > div');
-  let current = 0;
-  setInterval(() => {
-    slides[current].classList.remove('opacity-100');
-    slides[current].classList.add('opacity-0');
-    current = (current + 1) % slides.length;
-    slides[current].classList.remove('opacity-0');
-    slides[current].classList.add('opacity-100');
-  }, 5000);
-</script>
-
 
   <!-- Principal's Message -->
   <section class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-10 items-center">
@@ -393,5 +380,6 @@
 
 </body>
 </html>
+
 
 
